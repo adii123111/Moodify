@@ -1,79 +1,364 @@
 /* Resetting Default Margins and Padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  body {
-    background-color: #f0f8ff; /* Soft blue background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
-  
-  .container {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #0078d7;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .video-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    border: 2px solid #0078d7;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  video {
-    width: 100%;
-    max-width: 720px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+/* Hide sections by default */
+.hidden {
+  display: none;
+}
+
+.section {
+  padding: 40px;
+  transition: opacity 0.3s ease;
+}
+body {
+  background-color: #f0f8ff; /* Soft blue background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 4%; /* Ensures content starts below the fixed navbar */
+}
+
+/* Container Styling */
+.container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #0078d7;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Video Section Styling */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Button Styling */
+.detect-btn {
+  background-color: #0078d7;
+  color: #ffffff;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.detect-btn:hover {
+  background-color: #005fa3;
+}
+
+/* About Us Section Styling */
+.about-us {
+  background-color: #ffffff;
+  padding: 40px;
+  margin-top: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.profile-image {
+  width: 40%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  width: 55%;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #0078d7;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo img {
+  height: 50px;
+  margin-left: 30px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin-right: 30px;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Login Page Container */
+
+/* Login Page Styling */
+.login-page {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 80vh;
+  max-width: 1200px;
+  margin: 35px auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-image,
+.login-section {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-section {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-section h2 {
+  font-size: 2rem;
+  color: #0078d7;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #0078d7;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+#btn {
+  margin-left: 35%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
     height: auto;
-    border-radius: 12px;
   }
-  
-  canvas {
-    position: absolute;
-    /* top: 0;
-    left: 0;
+
+  .login-image {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .login-section {
+    max-width: 100%;
+    order: 2;
+    border-radius: 0;
+  }
+
+  #btn {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+.hidden {
+  display: none;
+}
+
+
+@media (max-width: 480px) {
+  .login-section {
+    padding: 20px;
+  }
+
+  .login-section h2 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"], input[type="password"], button[type="submit"] {
     width: 100%;
-    height: 100%;
-    pointer-events: none; */
   }
-  
-  .detect-btn {
-    background-color: #0078d7;
-    color: #ffffff;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  .login-page{
+    margin: 0;
+    height: 80vh;
   }
-  
-  .detect-btn:hover {
-    background-color: #005fa3;
+  .login-image{
+    height: 40vh;
+    }
+    
+    .logo img {
+      height: 50px;
+
+    }
+    .navbar{
+      height: 80px;
+    }
+    .navbar li {
+      margin-left: 0px;
+    
   }
-  
+  .navbar ul {
+    margin-right: 0px;
+
+}
+.container{
+  margin-top: 70px;
+}
+.hidden {
+  display: none;
+}
+
+.about-content {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-image {
+  width: 80%;
+  max-width: none;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  width: 100%;
+}
+
+
+}

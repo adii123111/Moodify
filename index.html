@@ -3,22 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Facial Expression Music Player</title>
+  <title>Login - Facial Expression Music Player</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="face-api.min.js"></script>
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Facial Expression Music Player</h1>
-    <p>Show your emotion (Happy, Sad, Angry, Surprise ) to play music!</p>
-
-    <div class="video-wrapper">
-      <video id="video" width="720" height="560" autoplay muted></video>
+  <!-- <nav class="navbar">
+    <div class="navbar-content">
+      <div class="logo">
+        <img id="mylogo" src="logo.png" alt="Logo">
+      </div>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li> 
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
     </div>
+  </nav> -->
 
-    <button class="detect-btn">Start Music Detection</button>
+  <div class="login-page">
+    <div class="login-image">
+      <img src="loginimg.jpg" alt="Login Image">
+    </div>
+    <div class="login-section">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button id="btn" type="submit">Login</button>
+      </form>
+      <p id="login-message" class="error-message"></p>
+    </div>
   </div>
+
+  <script src="login.js"></script>
 </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Facial Expression Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <script defer src="navigation.js"></script> <!-- New navigation JS -->
+</head>
+<body>
+<!-- 
+Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <div class="logo">
+      <img id="mylogo" src="logo.png" alt="Logo">
+    </div>
+    <ul>
+      <li><a href="#" id="nav-home">Home</a></li>
+      <li><a href="#" id="nav-about">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- Home Section -->
+<div id="home" class="container section">
+  <h1>Facial Expression Music Player</h1>
+  <p>Show your emotion (Happy, Sad, Calm, Angry, Surprise) to play music!</p>
+
+  <div class="video-wrapper">
+    <video id="video" width="720" height="560" autoplay muted></video>
+  </div>
+
+  <button class="detect-btn">Start Music Detection</button>
+</div>
+
+<!-- About Us Section -->
+<section id="about-us" class="about-us section hidden">
+  <div class="about-content">
+    <img src="img.jpg" alt="Your Image" class="profile-image">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        Welcome to Facial Expression Music Player! Our innovative web application leverages facial recognition technology to detect your emotions and play music that matches your mood. Whether you're happy, sad, angry, or surprised, we've got a tune for you.
+      </p>
+      <p>
+        Our mission is to create unique and interactive experiences using modern AI technologies.
+      </p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

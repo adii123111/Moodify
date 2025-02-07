@@ -45,7 +45,6 @@ video.addEventListener('play', () => {
     }
   }, 1000);
 });
-
 function navigateBasedOnEmotion(expressions) {
   const emotionThreshold = 0.5;
   const emotions = Object.entries(expressions);
@@ -60,16 +59,18 @@ function navigateBasedOnEmotion(expressions) {
         window.open('https://www.youtube.com/playlist?list=PL3-sRm8xAzY-w9GS19pLXMyFRTuJcuUjy', '_blank');
         break;
       case 'angry':
-        window.open('https://www.youtube.com/watch?v=Vrr3lRLjZ1Y&list=PLknqyEOvGo1YgL11BN1m-YOxaFHl29elY', '_blank');
+        window.open('https://www.youtube.com/playlist?list=PLknqyEOvGo1YgL11BN1m-YOxaFHl29elY', '_blank');
         break;
       case 'surprised':
         window.open('https://www.youtube.com/playlist?list=PLLd27tZalu3zRpolGDrklbbS1T-L5Lc7g', '_blank');
         break;
       default:
-        console.log('Neutral or other emotion detected');
+        console.log('Neutral emotion detected.');
+        window.open('https://www.youtube.com/playlist?list=PLwpFrtWg2EJF3KZy3URO7qZ3fpoZPH-ex', '_blank'); // Replace **** with your neutral YouTube link
     }
   }
 }
+
 
 // Handle button click to start detection
 detectButton.addEventListener('click', () => {
@@ -77,3 +78,32 @@ detectButton.addEventListener('click', () => {
   detectButton.disabled = true;
   detectButton.textContent = 'Detection Active';
 });
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const homeSection = document.getElementById("home");
+  const aboutSection = document.getElementById("about-us");
+  const navHome = document.getElementById("nav-home");
+  const navAbout = document.getElementById("nav-about");
+
+  // Show Home by default
+  homeSection.classList.remove("hidden");
+
+  // Navigation click events
+  navHome.addEventListener("click", () => {
+    homeSection.classList.remove("hidden");
+    aboutSection.classList.add("hidden");
+  });
+
+  navAbout.addEventListener("click", () => {
+    aboutSection.classList.remove("hidden");
+    homeSection.classList.add("hidden");
+  });
+});
+
+
+
