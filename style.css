@@ -311,9 +311,7 @@ button[type="submit"]:hover {
     font-size: 1.5rem;
   }
 
-  input[type="text"], input[type="password"], button[type="submit"] {
-    width: 100%;
-  }
+
   .login-page{
     
      margin: 4vh 2vh 2vh 2vh;
