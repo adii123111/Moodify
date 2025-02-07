@@ -17,7 +17,6 @@ function startVideo() {
 }
 
 video.addEventListener('play', () => {
-  // Create canvas and place it inside the same container as the video
   const canvas = faceapi.createCanvasFromMedia(video);
   video.parentElement.appendChild(canvas);
 
@@ -84,4 +83,26 @@ detectButton.addEventListener('click', () => {
   isDetectionActive = true;
   detectButton.disabled = true;
   detectButton.textContent = 'Detection Active';
+});
+
+// Navigation Logic for Home and About Section
+document.addEventListener('DOMContentLoaded', () => {
+  const homeSection = document.getElementById('home');
+  const aboutSection = document.getElementById('about-us');
+  const navHome = document.getElementById('nav-home');
+  const navAbout = document.getElementById('nav-about');
+
+  // Show Home by default
+  homeSection.classList.remove('hidden');
+  aboutSection.classList.add('hidden');
+
+  navHome.addEventListener('click', () => {
+    homeSection.classList.remove('hidden');
+    aboutSection.classList.add('hidden');
+  });
+
+  navAbout.addEventListener('click', () => {
+    aboutSection.classList.remove('hidden');
+    homeSection.classList.add('hidden');
+  });
 });
