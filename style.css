@@ -315,7 +315,8 @@ button[type="submit"]:hover {
     width: 100%;
   }
   .login-page{
-    margin: 0;
+    
+     margin: 4vh 2vh 2vh 2vh;
     height: 80vh;
   }
   .login-image{
