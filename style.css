@@ -358,6 +358,9 @@ button[type="submit"]:hover {
 .about-text {
   width: 100%;
 }
+  .navbar {
+    width: 100%;
+  }
 
 
 }
