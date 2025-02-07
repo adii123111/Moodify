@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener("submit", (event) => {
       event.preventDefault();
   
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
+      const username = document.getElementById("saeeda").value;
+      const password = document.getElementById("saeeda123").value;
   
       if (username === VALID_USERNAME && password === VALID_PASSWORD) {
         loginMessage.style.color = "green";
