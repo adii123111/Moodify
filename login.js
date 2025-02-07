@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginMessage = document.getElementById("login-message");
   
     // Dummy login credentials
-    const VALID_USERNAME = "admin";
-    const VALID_PASSWORD = "password123";
+    const VALID_USERNAME = "saeeda";
+    const VALID_PASSWORD = "saeeda123";
   
     loginForm.addEventListener("submit", (event) => {
       event.preventDefault();
   
-      const username = document.getElementById("saeeda").value;
-      const password = document.getElementById("saeeda123").value;
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
   
       if (username === VALID_USERNAME && password === VALID_PASSWORD) {
         loginMessage.style.color = "green";
