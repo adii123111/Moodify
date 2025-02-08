@@ -23,4 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
+  // Splash Screen
+const splash = document.querySelector('.splash'); // for splash screen
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    splash.classList.add('display');
+  }, 2950); // Delay of 3 seconds
+});
