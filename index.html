@@ -7,42 +7,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- <nav class="navbar">
-    <div class="navbar-content">
-      <div class="logo">
-        <img id="mylogo" src="logo.png" alt="Logo">
-      </div>
-      <ul>
-         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li> 
-        <li><a href="login.html" class="active">Login</a></li>
-      </ul>
-    </div>
-  </nav> -->
   <div class="splash">
     <img style="margin-top: 150px; width: 400px;" class="fade-in" src="splash.gif" alt="">
   </div>
   
-
   <div class="login-page">
     <div class="login-image">
       <img src="loginimg.jpg" alt="Login Image">
     </div>
     <div class="login-section">
-      <h2>Login</h2>
+      <h2  id="login" >Login</h2>
       <form id="login-form">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <input type="text" id="loginEmail" name="username" placeholder="Enter your email" required>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
 
-        <button id="btn" type="submit">Login</button>
+        <button id="btn" class="detect-btn" type="submit">Login</button>
+        <button id="register-btn" class="register-btn">Register</button>
       </form>
+
       <p id="login-message" class="error-message"></p>
+
+      <!-- Register Button -->
     </div>
   </div>
 
-  <script src="login.js"></script>
+  <script src="login.js" type="module"></script>
 </body>
 </html>
