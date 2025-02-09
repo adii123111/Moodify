@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 /* Hide sections by default */
 .hidden {
@@ -67,6 +67,7 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: red;
   pointer-events: none;
 }
 
@@ -86,6 +87,23 @@ canvas {
 .detect-btn:hover {
   background-color: #005fa3;
 }
+
+.register-btn {
+  background-color: #28a745;
+  color: #ffffff;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.register-btn:hover {
+  background-color: #218838;
+}
+
 
 /* About Us Section Styling */
 .about-us {
@@ -184,15 +202,14 @@ canvas {
   border-radius: 4px;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 /* Login Page Container */
 
 /* Login Page Styling */
+/* Apply same layout for register as login */
 .login-page {
   display: flex;
   align-items: stretch;
@@ -234,8 +251,11 @@ html {
   font-size: 2rem;
   color: #0078d7;
   margin-bottom: 20px;
-}
 
+}
+#login{
+  margin-right: 70px;
+}
 label {
   display: block;
   text-align: left;
@@ -244,13 +264,16 @@ label {
   color: #333;
 }
 
-input[type="text"], input[type="password"] {
-  width: 100%;
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Ensure full-width for all input fields */
+  max-width: 350px; /* Consistent max-width for both pages */
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
+  box-sizing: border-box; /* Prevent overflow issues */
 }
 
 button[type="submit"] {
@@ -262,8 +285,19 @@ button[type="submit"] {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
-}
+  width: 100%; /* Ensure full-width for all input fields */
+  max-width: 350px;
 
+}
+#register-btn{
+  background-color: white;
+  border: 2px solid #0078d7;
+  color: #0078d7;
+  width: 100%; /* Ensure full-width for all input fields */
+  max-width: 350px;
+  padding: 10px 20px;
+
+}
 button[type="submit"]:hover {
   background-color: #005fa3;
 }
@@ -271,10 +305,6 @@ button[type="submit"]:hover {
 .error-message {
   color: red;
   margin-top: 10px;
-}
-
-#btn {
-  margin-left: 35%;
 }
 
 /* Responsive Design */
@@ -303,6 +333,7 @@ button[type="submit"]:hover {
 .hidden {
   display: none;
 }
+
 @media (max-width: 480px) {
   .login-section {
     padding: 20px;
