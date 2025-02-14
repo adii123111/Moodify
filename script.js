@@ -106,3 +106,22 @@ document.addEventListener('DOMContentLoaded', () => {
     homeSection.classList.add('hidden');
   });
 });
+
+
+// Select the logout button
+const logoutBtn = document.getElementById('logoutBtn');
+
+// Add a click event listener
+logoutBtn.addEventListener('click', () => {
+  // Display confirmation dialog
+  const confirmation = confirm("Do you want to logout?");
+  
+  // Check user's choice
+  if (confirmation) {
+    // If yes, navigate to index.html
+    window.location.href = 'index.html';
+  } else {
+    // If no, stay on the same page
+    console.log("User chose to stay on the page.");
+  }
+});
