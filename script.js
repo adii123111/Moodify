@@ -125,3 +125,10 @@ logoutBtn.addEventListener('click', () => {
     console.log("User chose to stay on the page.");
   }
 });
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar-content ul');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('show');
+});
