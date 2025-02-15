@@ -492,6 +492,7 @@ button[type="submit"]:hover {
   width: 30px; /* Adjusted to be more reasonable */
   cursor: pointer;
   z-index: 10;
+      margin-top: 6px;
 }
 
 /* Responsive Styles */
