@@ -479,10 +479,46 @@ button[type="submit"]:hover {
 
 @media (max-width: 480px) {
   .logout-btn {
-    width: 100%;
+    width: 45%;
     font-size: 0.9rem;
-    padding: 8px 15px;
+    padding: 9px 17px;
     margin-left: 10px;
+    /* display: none; */
+  }
+}
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  width: 30px; /* Adjusted to be more reasonable */
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .navbar-content ul {
     display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 5;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+  .navbar-content ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
   }
 }
